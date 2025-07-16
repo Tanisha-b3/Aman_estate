@@ -8,11 +8,16 @@ export default {
     extend: {
       colors: {
         gold: {
-          400: '#daa520',
-          500: '#daa520',
-          300: '#f0d27a',
-          600: '#b8860b',
+          300: '#f0d27a',   // light gold
+          400: '#daa520',   // goldenrod
+          500: '#b8860b',   // darker goldenrod
+          600: '#996515',   // goldenbrown
         },
+        goldenrod: '#daa520',
+        goldenbrown: '#996515',
+      },
+      fontFamily: {
+        elegant: ['"Playfair Display"', 'serif'],
       },
     },
   },

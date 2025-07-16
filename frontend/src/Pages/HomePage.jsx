@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/navbar";
-import SearchBar from "../components/Searchbar";
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBed, FaBath, FaRulerCombined, FaArrowRight } from "react-icons/fa";
 import image1 from "../assets/image8.jpg";

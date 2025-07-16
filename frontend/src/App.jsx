@@ -12,6 +12,7 @@ function App() {
       <FeaturedProperties />
       <YouTubeChannel />
     </div>
+
   );
 }
 
