@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/image5.jpg';
-
+import Contact from '../Pages/Contact';
+import Services from '../Pages/Services';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Properties', href: '#properties' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Services', href: <Services /> },
+    { name: 'Contact', href: <Contact /> },
   ];
 
   return (
