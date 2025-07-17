@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/image5.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Properties', href: '#properties' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -22,22 +23,27 @@ const Navbar = () => {
               src={logo}
               alt="Aman Estate Logo"
               className="h-12 w-12 rounded-md object-cover border border-[#daa520] shadow-sm"
+              onClick={() => window.location.href = '/'}
             />
             <span className="text-2xl font-elegant tracking-wide text-white">
-  Aman <span className="text-[#daa520]">Estate</span>
-</span>
+              Aman <span className="text-[#daa520]">Estate</span>
+            </span>
           </div>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
-              <a
+              <NavLink
                 key={link.name}
-                href={link.href}
-                className="text-sm font-medium hover:text-[#daa520] transition duration-200"
+                to={link.path}
+                className={({ isActive }) =>
+                  `text-sm font-medium transition duration-200 ${
+                    isActive ? 'text-[#daa520] border-b-2 border-[#daa520]' : 'text-white hover:text-[#daa520]'
+                  }`
+                }
               >
                 {link.name}
-              </a>
+              </NavLink>
             ))}
             <div className="flex items-center space-x-4">
               <a href="tel:+686858866" className="flex items-center text-sm hover:text-[#daa520] transition">
@@ -67,17 +73,21 @@ const Navbar = () => {
         <div className="md:hidden bg-[#0a0a0a] border-t border-[#daa520]">
           <div className="px-4 py-4 space-y-3">
             {links.map((link) => (
-              <a
+              <NavLink
                 key={link.name}
-                href={link.href}
-                className="block text-base font-medium hover:text-[#daa520] transition"
+                to={link.path}
                 onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `block text-base font-medium transition ${
+                    isActive ? 'text-[#daa520]' : 'text-white hover:text-[#daa520]'
+                  }`
+                }
               >
                 {link.name}
-              </a>
+              </NavLink>
             ))}
             <div className="border-t border-[#daa520] pt-4">
-              <div className="flex items-center text-sm space-x-2">
+              <div className="flex items-center text-sm space-x-2 text-white">
                 <FaPhone />
                 <span>+68 685 8866</span>
               </div>
@@ -93,3 +103,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

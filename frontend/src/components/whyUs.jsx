@@ -38,7 +38,7 @@ const WhyUsSection = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-gray-600 mb-12"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Discover why thousands trust Aman Estate for their real estate needs.
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+
 import SearchBar from "../components/SearchBar";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBed, FaBath, FaRulerCombined, FaArrowRight } from "react-icons/fa";
@@ -8,6 +8,9 @@ import image2 from "../assets/image11.jpg";
 import image3 from "../assets/image12.jpg";
 import image4 from "../assets/image13.jpg";
 import image5 from "../assets/image9.jpg";
+import WhyUsSection from "../components/whyUs";
+import FeaturedProperties from "../components/featureProperties";
+import YouTubeChannel from "../components/youtube";
 
 const slides = [
   { src: image1, alt: "Office space view 1" },
@@ -25,7 +28,7 @@ export default function HomePage() {
       setCurrentSlide((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1
       );
-    }, 5000);
+    },3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -36,9 +39,9 @@ export default function HomePage() {
   ];
 
   return (
+    <>
     <div className="min-h-screen">
-      <Navbar />
-
+  
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden m-3">
         {/* Slideshow */}
@@ -46,9 +49,9 @@ export default function HomePage() {
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 1.5 }}
+            transition={{ duration: 2 }}
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slides[currentSlide].src})` }}
           />
@@ -126,5 +129,9 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    <WhyUsSection />
+      <FeaturedProperties />
+      <YouTubeChannel />
+    </>
   );
 }
