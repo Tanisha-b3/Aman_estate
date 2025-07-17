@@ -23,7 +23,7 @@ export default function SearchBar() {
         <option>Office</option>
       </select>
 
-      {/* ✅ Added Property Price Filter */}
+      
       <select className="border border-gray-300 focus:border-[#daa520] focus:ring-[#daa520] focus:ring-1 p-3 rounded-md w-full md:w-auto transition">
         <option>All Budgets</option>
         <option>Under ₹10,000</option>
