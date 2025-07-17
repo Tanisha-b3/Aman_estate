@@ -50,7 +50,7 @@ const WhyUsSection = () => {
             transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
             className="flex flex-col items-center space-y-4"
           >
-            <div className="text-green-900">{feature.icon}</div>
+            <div className="text-[#996515]">{feature.icon}</div>
             <h3 className="text-lg font-semibold">{feature.title}</h3>
             <p className="text-gray-600">{feature.description}</p>
           </motion.div>
@@ -61,7 +61,7 @@ const WhyUsSection = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="bg-green-900 rounded-lg py-8 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white"
+        className="bg-[#996515] rounded-lg py-8 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white"
       >
         <div className="mb-4 md:mb-0">
           <h4 className="text-xl font-semibold mb-2">Sign in to streamline your search</h4>

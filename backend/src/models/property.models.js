@@ -17,10 +17,12 @@ const propertySchema = new Schema({
     status: {
         type: String,
         enum: ['sale', 'rent'],
+        default: true
     },
     type: {
         type: String,
         enum: ['apartment', 'house', 'land'],
+        default: true
     },
     imageURL: {
         type: String,
@@ -37,6 +39,7 @@ const propertySchema = new Schema({
     location: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Location',
+        default: true
     }
 }, {
     timestamps: true,
