@@ -109,7 +109,7 @@ const FeaturedProperties = () => {
         {filters.map((filter, index) => (
           <button
             key={index}
-            className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition"
+            className="bg-[#daa520] px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition"
           >
             {filter}
           </button>

@@ -1,18 +1,18 @@
 import React from "react";
-import HomePage from './Pages/HomePage'
-import WhyUsSection from "./components/whyUs";
-import FeaturedProperties from "./components/featureProperties";
-import YouTubeChannel from "./components/youtube";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from './Pages/HomePage';
+import Contact from "./Pages/Contact";
+import Services from "./Pages/Services";
 
 function App() {
   return (
-    <div>
-      <HomePage />
-      <WhyUsSection />
-      <FeaturedProperties />
-      <YouTubeChannel />
-    </div>
-
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
